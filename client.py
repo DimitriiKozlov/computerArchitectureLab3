@@ -1,12 +1,19 @@
 import pysimplesoap.client
 
+"Contributed modules"
+import pysimplesoap.client
+import pysimplesoap.server
+import pysimplesoap.simplexml
+import pysimplesoap.client
+import pysimplesoap.transport
+
 # create a simple consumer
 client = pysimplesoap.client.SoapClient(
     location="http://localhost:8008/",
     action='http://localhost:8008/',  # SOAPAction
     namespace="http://example.com/sample.wsdl",
     soap_ns='soap',
-    trace=True,
+    # trace=True,
     ns=False)
 
 while True:
